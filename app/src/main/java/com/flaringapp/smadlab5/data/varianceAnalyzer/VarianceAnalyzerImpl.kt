@@ -30,11 +30,11 @@ class VarianceAnalyzerImpl : VarianceAnalyzer {
     }
 
     private fun totalVariance(q: Double, n: Int, m: Int): Double {
-        return q / (n * m)
+        return q / (n * m - 1)
     }
 
     private fun intergroupVariance(q1: Double, n: Int): Double {
-        return q1 / n
+        return q1 / (n - 1)
     }
 
     private fun residualVariance(q2: Double, n: Int, m: Int): Double {
